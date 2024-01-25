@@ -1,0 +1,11 @@
+<p>Parent component</p>
+<button (click)="goToChild()">go to Child</button> 
+<hr>
+{{parentCounter}} 
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button>
+<hr>
+
+<ng-container *ngIf = "showChild">
+    <app-child (childCounterValue)="handleChildCounter($event)" [childCounter]="parentCounter" (showChild)="handleShowChild($event)"></app-child>
+</ng-container>

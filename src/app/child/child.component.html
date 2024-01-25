@@ -1,0 +1,7 @@
+<p>child works!</p>
+<button (click)="goToParent()">Go to Parent</button>
+<ng-container *ngIf="childCounter !== null">
+    {{childCounter}}
+    <button (click)="childCounterIncrement()">+</button>
+    <button (click)="childCounterDecrement()">-</button>
+</ng-container>
